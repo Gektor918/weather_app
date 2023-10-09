@@ -6,9 +6,7 @@ from requests.exceptions import RequestException
 
 
 async def request_api(city_name, data):
-    """
-    Send an asynchronous request to the Yandex Weather API to fetch weather data for the specified city.
-    """
+
     api_key = 'd958356f-59a1-4617-8868-795a60a40f9c'
     headers = {'X-Yandex-API-Key': api_key}
     url = "https://api.weather.yandex.ru/v2/forecast/?lat={0}&lon={1}&lang=ru_RU".format(data[city_name]['lat'], data[(city_name)]['lot'])
